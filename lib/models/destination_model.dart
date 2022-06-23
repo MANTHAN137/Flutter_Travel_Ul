@@ -26,7 +26,7 @@ List<Activity> activities = [
     price: 30,
   ),
   Activity(
-    imageUrl: 'assets/images/temple.jpg',
+    imageUrl: 'assets/images/locations/temple.jpg',
     name: 'Temple',
     type: 'Sightseeing Tour',
     startTimes: ['11:00 pm', '1:00 pm'],
@@ -34,7 +34,7 @@ List<Activity> activities = [
     price: 210,
   ),
   Activity(
-    imageUrl: 'assets/images/waterfall.jpg',
+    imageUrl: 'assets/images/locations/waterfall.jpg',
     name: 'Jog fall',
     type: 'Sightseeing Tour',
     startTimes: ['12:30 pm', '2:00 pm'],
@@ -73,7 +73,7 @@ List<Destination> destinations = [
     activities: activities,
   ),
   Destination(
-    imageUrl: 'assets/images/newyork.jpg',
+    imageUrl: 'assets/images/bangalore.jpg',
     city: 'Bangalore',
     state: 'Karnataka',
     description: 'Visit Bangalore for an amazing and unforgettable adventure.',

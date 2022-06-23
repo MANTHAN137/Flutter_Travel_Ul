@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:fun_app/Widgets/DestinationWidget.dart';
+import 'package:fun_app/Widgets/HotelWidget.dart';
+
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,9 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
     FontAwesomeIcons.personWalking,
     FontAwesomeIcons.personBiking
   ];
-
+  int _selectedIndex = 1;
   Widget _buildIcon(int index) {
-    int _selectedIndex = 1;
+    
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -28,13 +31,13 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: BoxDecoration(
             color: _selectedIndex == index
                 ? Theme.of(context).backgroundColor
-                : Color.fromARGB(255, 88, 27, 27),
+                : Color.fromARGB(255, 14, 170, 146),
             borderRadius: BorderRadius.circular(30.0)),
         child: Icon(_icons[index],
             size: 27.0,
             color: _selectedIndex == index
                 ? Theme.of(context).primaryColor
-                : Color(0xFFB4C1C4)),
+                : Color.fromARGB(255, 214, 225, 228)),
       ),
     );
   }
@@ -44,16 +47,16 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SafeArea(
           child: ListView(
-        padding: EdgeInsets.symmetric(vertical: 30.0),
+        padding: const EdgeInsets.symmetric(vertical: 30.0),
         children: <Widget>[
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20.0, right: 120.0),
             child: Text(
               "What would you like to find?",
               style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: _icons
@@ -63,6 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     (MapEntry map) => _buildIcon(map.key),
                   )
                   .toList()),
+          const SizedBox(height: 20),
+            DestinationCarousel(),
+            HotelCarousel()
         ],
       )),
     );
