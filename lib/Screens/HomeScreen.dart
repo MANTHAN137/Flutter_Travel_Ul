@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fun_app/Widgets/DestinationWidget.dart';
 import 'package:fun_app/Widgets/HotelWidget.dart';
 
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -16,9 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
     FontAwesomeIcons.personWalking,
     FontAwesomeIcons.personBiking
   ];
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
+  int _currentTab = 0;
   Widget _buildIcon(int index) {
-    
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -67,10 +66,38 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                   .toList()),
           const SizedBox(height: 20),
-            DestinationCarousel(),
-            HotelCarousel()
+          DestinationCarousel(),
+          HotelCarousel()
         ],
       )),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTab,
+        onTap: (int value) {
+          setState(() {
+            _currentTab = value;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 30.0,
+              ),
+              label: "Search"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.cookie_rounded,
+                size: 30.0,
+              ),
+              label: "Food"),
+          BottomNavigationBarItem(
+              icon: CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage('assets/images/kolkata.jpg'),
+              ),
+              label: "Profile")
+        ],
+      ),
     );
   }
 }

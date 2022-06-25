@@ -66,6 +66,13 @@ List<Destination> destinations = [
     activities: activities,
   ),
   Destination(
+    imageUrl: 'assets/images/kolkata.jpg',
+    city: 'Kolkata',
+    state: 'Bengal',
+    description: 'Visit Kolkata for an amazing and unforgettable adventure.',
+    activities: activities,
+  ),
+  Destination(
     imageUrl: 'assets/images/shimla.jpg',
     city: 'shimla',
     state: 'Himachal',
