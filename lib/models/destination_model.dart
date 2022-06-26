@@ -41,6 +41,14 @@ List<Activity> activities = [
     rating: 3,
     price: 125,
   ),
+  Activity(
+    imageUrl: 'assets/images/locations/skydiving.jpg',
+    name: 'Sky-Diving',
+    type: 'Sky Tour',
+    startTimes: ['12:30 pm', '2:00 pm'],
+    rating: 5,
+    price: 1000,
+  ),
 ];
 
 List<Destination> destinations = [
