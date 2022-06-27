@@ -23,7 +23,7 @@ List<Activity> activities = [
     type: 'Shopping and mall tour',
     startTimes: ['9:00 am', '11:00 am'],
     rating: 5,
-    price: 30,
+    price: 35,
   ),
   Activity(
     imageUrl: 'assets/images/locations/temple.jpg',
@@ -31,7 +31,7 @@ List<Activity> activities = [
     type: 'Sightseeing Tour',
     startTimes: ['11:00 pm', '1:00 pm'],
     rating: 4,
-    price: 210,
+    price: 360,
   ),
   Activity(
     imageUrl: 'assets/images/locations/waterfall.jpg',
