@@ -1,16 +1,4 @@
-# fun_app
+# Travel App UI
 
-A new Flutter project.
+https://user-images.githubusercontent.com/90518833/175921741-1e68cd7f-08eb-470f-91f4-71fefc0ae010.mp4
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
